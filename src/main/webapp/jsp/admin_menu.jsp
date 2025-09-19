@@ -104,7 +104,7 @@
                         ${entry.value}
                         <c:choose>
                             <c:when test="${entry.value >= 45}">
-                                <span class="danger-message">🚨 残業時間上限超過</span>
+                                <span class="danger-message">🚨 残業時間上限超過ちゃんと休ませてください</span>
                             </c:when>
                             <c:when test="${entry.value >= 40 && entry.value < 45}">
                                 <span class="warning-message">⚠ 月上限に近い</span>
