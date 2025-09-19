@@ -1,18 +1,12 @@
-<%@ page contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"
-         isErrorPage="true" %>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <meta charset="UTF-8">
-    <title>エラー</title>
-    <link rel="stylesheet"href="${pageContext.request.contextPath}/style.css"> 
-</head>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head><title>エラー</title></head>
 <body>
-    <h1>エラーが発生しました</h1>
-    <p>申し訳ありませんが、処理中にエラーが発生しました。</p>
-    <p>エラーメッセージ: <%= exception.getMessage() %></p>
-    <a href="../login.jsp">ログインページに戻る</a>
+<h2>エラーが発生しました</h2>
+<p style="color:red">${errorMessage}</p>
+<c:if test="${not empty exception}">
+    <pre>${exception}</pre>
+</c:if>
+<a href="attendance">戻る</a>
 </body>
 </html>
